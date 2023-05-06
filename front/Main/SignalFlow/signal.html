@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Signal FLow Graph</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+    
+    <div id="input">
+        <div id="container1">
+            <input type="checkbox" id="switch" onclick="toggle()" /><label for="switch">Toggle</label>
+        </div>
+        <h1 style="text-align: center;">input goes here!!!</h1>
+        <input type="text" placeholder="Enter name here" id="name">
+        <button id="add" style="height: fit-content;width: fit-content;">Add node</button>
+        <br>
+        <input type="text" placeholder="From" id="from">
+        <input type="text" placeholder="To" id="to">
+        <input type="text" placeholder="Edge weight" id="weight">
+
+        <button id="connect" style="height: fit-content;width: fit-content;">Connect</button>
+        <br>
+        <button id="send" style="height: fit-content;width: fit-content;">Send to Back</button>
+    </div>
+
+    <div id="drawing">
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <div id="results">
+        <p id="info"></p>
+    </div>
+    
+</body>
+<script src='index.js'></script>
+</html>

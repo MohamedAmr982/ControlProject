@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="routh.css">
+    <div style="display:flex;justify-content: center;">
+        <h1 style="color:white;">Welcome To System Stability Checker</h1>
+    </div>
+</head>
+
+<body>
+    <div id="container1">
+        <input type="checkbox" id="switch" onclick="toggle()" /><label for="switch">Toggle</label>
+    </div>
+    <div id="container">
+        <div id="input">
+            <h2 style="color: gold;">Enter The Equation</h2>
+            <input id="inp" type="text" placeholder="As^n+Bs^n-1+Cs^n-2+...+Fs+c"
+                >
+            <button id="butt" style="width: fit-content;">Click</button>
+        </div>
+    </div>
+    <div id="result" style="color: black; font-size: larger; text-align: center;">
+        <p id="stability"></p>
+        <p id="changes"></p>
+    </div>
+    <script src="routh.js"></script>
+</body>
+
+</html>

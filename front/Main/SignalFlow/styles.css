@@ -1,0 +1,94 @@
+*{
+    padding:0;
+    margin: 0;
+}
+
+body{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
+    
+}
+body.dark-mode h1{
+    color: white;
+}
+body.dark-mode{
+    background: black; 
+    background-color: black;
+} 
+body.dark-mode canvas{
+    background-color: rgb(99, 98, 98);
+}
+body.dark-mode p{
+    color: white;
+}
+#container1{
+    display: flex;
+    justify-content: right;
+}
+input[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 70px;
+    height: 40px;
+    background: grey;
+    display: block;
+    border-radius: 50px;
+    position: relative;
+    margin: 0% 0% 0% 0%;
+    
+   }
+   
+   label:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 50px;
+    transition: 0.3s;
+   }
+   
+   input:checked + label {
+    background: #bada55;
+   }
+   
+   input:checked + label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+   }
+   
+   label:active:after {
+    width: 50px;
+   }
+canvas{
+    background-color: #f5f1f1;
+    height:auto;
+    width:auto;
+    /* width: 10000px;
+    height: 500px; */
+
+}
+#input button{
+    height: 30%;
+    width: fit-content;
+    height: fit-content;
+}
+#drawing{
+    flex-grow: 5;
+    max-height:1000px;
+    max-width: 10000px;
+    overflow:scroll;
+}
+
+
