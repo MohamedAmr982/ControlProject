@@ -4,7 +4,7 @@ Computer & Systems Engineering Department
 CSE-241-Control Systems Basics Contributors:  
  	Name  	ID  
 1 	George Selim Abdallah Khalil 	20010436 
-2 	Omar Tarek Abd El Wahhab Mohamed Ali 	20010998  
+2 	Omar Tarek Abdel Wahhab Mohamed Ali 	20010998  
 3 	Karim Fathy Abd Al Aziz Mohamed Mostafa 	20011116 
 4  	Mohamed Amr Abdelfattah Mahmoud 	20011675 
 5 	Mahmoud Ali Ahmed Ali Ghallab 	20011811 
