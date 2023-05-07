@@ -66,3 +66,13 @@ label {
     flex-direction: column;
     align-items: center;
    }
+
+   td,table,tr{
+    border: 1px solid black;
+    min-width: 10rem;
+   }
+   #tableContainer{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+   }

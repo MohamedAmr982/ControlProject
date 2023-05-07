@@ -85,4 +85,11 @@ public class Controller {
         System.out.println(eqn);
         return routhService.solve(eqn);
     }
+    @PostMapping(
+            value="/getTable"
+    )
+    public double[][] getTable(@RequestBody String eqn){
+        System.out.println(eqn);
+        return routhService.getTable(eqn);
+    }
 }

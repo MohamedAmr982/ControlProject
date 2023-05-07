@@ -97,6 +97,27 @@ public class RSService {
             System.out.println();
         }
     }
+
+    public double[][] getTable(String eqn){
+        double[] coeffs = ExtractCoeffecients.extract_coeff(eqn);
+        double[][]routh=new double[coeffs.length][(coeffs.length+1)/2];
+        int l=0,k=1;
+        boolean entire_is_zero=true;
+        for (int i = 0; i < routh[0].length; i++) {
+            routh[0][i]=coeffs[l];
+            if(k< coeffs.length)
+                routh[1][i]=coeffs[k];
+            l=l+2;k=k+2;
+        }
+        for (int i = 2; i < routh.length; i++) {
+            for (int j = 0; j < routh[0].length-1; j++) {
+                if(routh[i-1][j]==0)
+                    routh[i-1][j]=1E-300;
+                routh[i][j] = (routh[i-1][0]*routh[i-2][j+1] - routh[i-2][0]*routh[i-1][j+1]) / routh[i-1][0];
+            }
+        }
+        return routh;
+    }
     public Pair isStable(double[] coeffs) {
         double[][]routh=new double[coeffs.length][(coeffs.length+1)/2];
         int l=0,k=1;

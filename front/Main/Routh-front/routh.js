@@ -35,6 +35,32 @@ async function send()
     }else{
         stabilityres.innerText = `System is ${data.status? "stable": "unstable"}`
     }
+
+    const tableResponse = await fetch("http://localhost:8080/getTable",{
+        method:"POST",
+        mode:"cors",
+        credentials:"same-origin",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        redirect:"follow",
+        referrerPolicy:"no-referrer",
+        body:eqn.value
+    })
+
+    const tableData = await tableResponse.json()
+    console.log(tableData)
+
+    const table = document.getElementById("table")
+
+    table.innerHTML = ''
+    const tableBody =tableData.map((row)=>
+    `<tr><td>${row[0]}</td><td>${row[1]}</td></tr>`)
+    
+    console.log(tableBody)
+
+
+    tableBody.forEach((row)=>table.innerHTML+=row)
     
 }
 function toggle()
